@@ -7,7 +7,7 @@ jQuery(document).ready( function() {
 
     // Sending messages to draw.io server.
     var send_msg = function (data) {
-        plugin_iframe.contentWindow.postMessage(JSON.stringify(data), 'https://www.draw.io');
+        plugin_iframe.contentWindow.postMessage(JSON.stringify(data), 'https://embed.diagrams.net');
     }
 
     // User clicked "save", so save the file to media library.
