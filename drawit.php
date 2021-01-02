@@ -1,13 +1,13 @@
 <?php
 /**
  * @package DrawIt (draw.io)
- * @version 1.1.3
+ * @version 1.1.4
  */
 /*
 Plugin Name:    DrawIt (draw.io)
 Plugin URI:     http://www.assortedchips.com/#drawit
 Description:    Draw and edit flow charts, diagrams, images and more while editing a post.
-Version:        1.1.3
+Version:        1.1.4
 Author:         assorted[chips]
 Author URI:     http://www.assortedchips.com/
 License:        GPL3 or later
@@ -159,7 +159,7 @@ class drawit {
             wp_enqueue_style($this->plugin_slug . '-css', plugins_url('css/' . $this->plugin_slug . '.min.css', __FILE__), array(), $this->plugin_version);
         }
         wp_enqueue_script($this->plugin_slug . '-iframe-js', plugins_url('js/' . $this->plugin_slug . '-iframe.js', __FILE__), array(), $this->plugin_version, true);
-        //wp_enqueue_script($this->plugin_slug . '-js-embed', 'https://www.draw.io/embed.js?s=basic', array(), $this->plugin_version, true);
+        //wp_enqueue_script($this->plugin_slug . '-js-embed', 'https://embed.diagrams.net/embed.js?s=basic', array(), $this->plugin_version, true);
     }
 
     // Add draw.io tab to "Insert Media" page when editing a post or page.
@@ -453,7 +453,7 @@ class drawit {
             }
             unset($tp);
             ?></select></div>
-        <iframe class="<?php echo $this->plugin_slug; ?>-editor-iframe" id="<?php echo $this->plugin_slug; ?>-iframe" src="https://www.draw.io/?embed=1&analytics=0&gapi=0&db=0&od=0&proto=json&spin=1"></iframe>
+        <iframe class="<?php echo $this->plugin_slug; ?>-editor-iframe" id="<?php echo $this->plugin_slug; ?>-iframe" src="https://embed.diagrams.net/?embed=1&analytics=0&gapi=0&db=0&od=0&proto=json&spin=1"></iframe>
         <div class="<?php echo $this->plugin_slug; ?>-editor-mask" id="<?php echo $this->plugin_slug; ?>-editor-mask" style="display:none;"><div class="<?php echo $this->plugin_slug; ?>-editor-saving">Saving...<div class="<?php echo $this->plugin_slug; ?>-editor-saving-x" onclick="jQuery('.<?php echo $this->plugin_slug; ?>-editor-mask').css('display','none');">x</div></div></div>
 
     <?php
